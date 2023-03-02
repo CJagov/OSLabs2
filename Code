@@ -1,0 +1,103 @@
+C:\Users\George>d:
+
+D:\>git clone https://github.com/CJagov/Lab2.git
+Cloning into 'Lab2'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+D:\>git log
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\>cd test Lab2
+Системе не удается найти указанный путь.
+
+D:\>cd Lab2
+
+D:\Lab2>git log
+commit c2b30eecb8c31f5a2962fadc12b34eb4b7de87fa (HEAD -> main, origin/main, origin/HEAD)
+Author: CJagov <108652412+CJagov@users.noreply.github.com>
+Date:   Thu Mar 2 14:22:33 2023 +0500
+
+    Update README
+
+commit cc99cf09610fbba3de8e69e460b2714e8b3169db
+Author: CJagov <108652412+CJagov@users.noreply.github.com>
+Date:   Thu Mar 2 14:21:32 2023 +0500
+
+    Initial commit
+
+D:\Lab2>git remote add github https://github.com/CJagov/Lab2.git
+
+D:\Lab2>git remote -v
+github  https://github.com/CJagov/Lab2.git (fetch)
+github  https://github.com/CJagov/Lab2.git (push)
+origin  https://github.com/CJagov/Lab2.git (fetch)
+origin  https://github.com/CJagov/Lab2.git (push)
+
+D:\Lab2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\Lab2>git add info.txt
+
+D:\Lab2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   info.txt
+
+
+D:\Lab2>git commit -m "Add info.txt"
+[main d4a1578] Add info.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 info.txt
+
+D:\Lab2>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+D:\Lab2>git log
+commit d4a157890192f72ea4be12d753fe79027b34bb39 (HEAD -> main)
+Author: georgehgisamov <khisamovg2@mail.ru>
+Date:   Thu Mar 2 14:35:11 2023 +0500
+
+    Add info.txt
+
+commit c2b30eecb8c31f5a2962fadc12b34eb4b7de87fa (origin/main, origin/HEAD)
+Author: CJagov <108652412+CJagov@users.noreply.github.com>
+Date:   Thu Mar 2 14:22:33 2023 +0500
+
+    Update README
+
+commit cc99cf09610fbba3de8e69e460b2714e8b3169db
+Author: CJagov <108652412+CJagov@users.noreply.github.com>
+Date:   Thu Mar 2 14:21:32 2023 +0500
+
+    Initial commit
+
+D:\Lab2>git push -u github main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CJagov/Lab2.git
+   c2b30ee..d4a1578  main -> main
+branch 'main' set up to track 'github/main'.
+
+D:\Lab2>
